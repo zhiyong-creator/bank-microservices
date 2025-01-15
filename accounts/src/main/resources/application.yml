@@ -1,0 +1,58 @@
+#spring.application.name=accounts
+
+server:
+  port: 8080
+spring:
+  application:
+    name: "accounts"
+  datasource:
+    url: jdbc:h2:file:C:/Users/zy/test/accountsdb
+    driverClassName: org.h2.Driver
+    username: sa
+    password: ''
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  h2:
+    console:
+      enabled: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    shutdown:
+      enabled: true
+  info:
+    env:
+      enabled: true
+
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    fetchRegistry: true
+    registerWithEureka: true
+    service-url:
+      defaultZone: http://localhost:8070/eureka/
+info:
+  app:
+    name: 'accounts'
+    description: 'Accounts Microservice'
+    version: '1.0'
+    build:
+      name: 'Accounts Microservice'
+      artifact: 'accounts'
+      group: 'org.yiqixue'
+      version: '1.0'
+      time: ${build.time}
+      java:
+        version: ${java.version}
+        vendor: ${java.vendor}
+        runtime: ${java.runtime.name}
+        build: ${java.runtime.version}
+        home: ${java.home}
