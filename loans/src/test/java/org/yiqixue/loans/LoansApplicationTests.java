@@ -1,4 +1,4 @@
-package org.yiqixue.loans;
+package org.daizhiyong.loans;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

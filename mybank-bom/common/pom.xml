@@ -3,12 +3,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>org.yiqixue</groupId>
+        <groupId>org.daizhiyong</groupId>
         <artifactId>mybank-bom</artifactId>
         <version>0.0.1-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
-    <groupId>com.yuqixue</groupId>
+    <groupId>com.daizhiyong</groupId>
     <artifactId>common</artifactId>
     <version>${common-libs.version}</version>
     <name>common</name>
@@ -31,6 +31,13 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <!-- Spring Data JPA for BaseEntity -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+            <optional>true</optional>
         </dependency>
 
         <dependency>
@@ -62,54 +69,17 @@
     <build>
         <plugins>
             <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-                <configuration>
-                    <excludes>
-                        <exclude>
-                            <groupId>org.projectlombok</groupId>
-                            <artifactId>lombok</artifactId>
-                        </exclude>
-                    </excludes>
-                </configuration>
-            </plugin>
-            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <id>default-compile</id>
-                        <phase>compile</phase>
-                        <goals>
-                            <goal>compile</goal>
-                        </goals>
-                        <configuration>
-                            <annotationProcessorPaths>
-                                <path>
-                                    <groupId>org.projectlombok</groupId>
-                                    <artifactId>lombok</artifactId>
-                                    <version>${lombok.version}</version>
-                                </path>
-                            </annotationProcessorPaths>
-                        </configuration>
-                    </execution>
-                    <execution>
-                        <id>default-testCompile</id>
-                        <phase>test-compile</phase>
-                        <goals>
-                            <goal>testCompile</goal>
-                        </goals>
-                        <configuration>
-                            <annotationProcessorPaths>
-                                <path>
-                                    <groupId>org.projectlombok</groupId>
-                                    <artifactId>lombok</artifactId>
-                                    <version>${lombok.version}</version>
-                                </path>
-                            </annotationProcessorPaths>
-                        </configuration>
-                    </execution>
-                </executions>
+                <configuration>
+                    <annotationProcessorPaths>
+                        <path>
+                            <groupId>org.projectlombok</groupId>
+                            <artifactId>lombok</artifactId>
+                            <version>${lombok.version}</version>
+                        </path>
+                    </annotationProcessorPaths>
+                </configuration>
             </plugin>
         </plugins>
     </build>

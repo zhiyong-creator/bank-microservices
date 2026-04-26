@@ -3,16 +3,16 @@
 		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<groupId>org.yiqixue</groupId>
+		<groupId>org.daizhiyong</groupId>
 		<artifactId>mybank-bom</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 		<relativePath>../mybank-bom/pom.xml</relativePath> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>org.yiqixue</groupId>
+	<groupId>org.daizhiyong</groupId>
 	<artifactId>loans</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>loans</name>
-	<description>org.yiqixue for gzasc Spring Cloud course</description>
+	<description>org.daizhiyong for gzasc Spring Cloud course</description>
 	<url/>
 	<licenses>
 		<license/>
@@ -44,15 +44,7 @@
 			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springdoc</groupId>
-			<artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>com.yuqixue</groupId>
+			<groupId>com.daizhiyong</groupId>
 			<artifactId>common</artifactId>
 			<version>${common-libs.version}</version>
 		</dependency>

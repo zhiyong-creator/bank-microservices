@@ -1,7 +1,6 @@
-#spring.application.name=accounts
-
 server:
-  port: 8080
+  port: 8081
+
 spring:
   application:
     name: "accounts"
@@ -9,7 +8,7 @@ spring:
     url: jdbc:h2:file:C:/Users/zy/test/accountsdb
     driverClassName: org.h2.Driver
     username: sa
-    password: ''
+    password: ""
   jpa:
     database-platform: org.hibernate.dialect.H2Dialect
     hibernate:
@@ -47,7 +46,7 @@ info:
     build:
       name: 'Accounts Microservice'
       artifact: 'accounts'
-      group: 'org.yiqixue'
+      group: 'org.daizhiyong'
       version: '1.0'
       time: ${build.time}
       java:

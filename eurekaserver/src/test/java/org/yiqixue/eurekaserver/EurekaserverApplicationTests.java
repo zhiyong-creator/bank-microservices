@@ -1,4 +1,4 @@
-package org.yiqixue.eurekaserver;
+package org.daizhiyong.eurekaserver;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
